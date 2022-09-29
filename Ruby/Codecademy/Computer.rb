@@ -5,7 +5,6 @@ class Computer
     @username = username
     @password = password
     @files = {}
-    @fileList = []
     @@users[username] = password
   end
   
@@ -13,7 +12,6 @@ class Computer
     time = Time.now
     @files[filename] = time
     puts "#{filename} was created at #{time} by #{@username}. "
-    @fileList.push(filename)
   end
   
   def Computer.get_users
@@ -21,7 +19,7 @@ class Computer
   end
 
   def printFiles()
-    @fileList
+    @files
   end
 end
 
